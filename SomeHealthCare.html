@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Some Health Care</title>
+        <link rel="stylesheet" href="SomeHealthCare.css">
+    </head>
+    <body>
+        <div id="header">
+            <div id="headerImg">
+                <img src="images\medCross.jpg" width="50px" height="50px">
+            </div>
+            <h1>Some Health Care</h1>
+        </div>
+
+        <div id="navigation">
+            <h3 id="links">Links</h3>
+            <ul>
+                <li><a href="SomeHealthCare.html">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="physicians.html">Physicians</a><li>
+                <li><a href="tempPage.html">Articles</a></li>
+                <li><a href="tempPage.html">Locations</a></li>
+                <li><a href="tempPage.html">Contact Us</a></li>
+                <li><a href="tempPage.html">Careers</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div id="content_1">
+                <h2 id="welcomeHeader">Welcome to Some Health Care</h2>
+                <p id="welcomeMsg"><b>Use this web portal to access lab reports, pay bills, and much more</b></p> 
+
+                <div id="login">
+                    <h3 id="loginHeader">User login:</h3>
+                    <form id="loginForm" name="loginForm" action="tempPage.html" method="post">
+                        <p>User name: <input name="username" id="username" type="text" required></p>
+
+                        <p>Password: <input name="pwd" id="pwd" type="password" minlength="8" maxlength="50" required></p>
+
+                        <p><input id="submit" class="buttons" name="submit" type="submit" value="Login"></p>
+                        <p id="errorMsg"></p>
+                    </form>
+                    <p id="newUser">New user? <a href="newUserLogin.asp">Click here</a></p>
+                </div>
+
+                <div id="caution">
+                    <p><b>In case of medical emergency, dial 911</b></p>
+                </div>
+            </div>
+
+            <footer id="foot">
+                <p>Please note-This is <b>not</b> a real website!</p>
+            </footer>
+        </div>
+
+    </body>
+</html>
