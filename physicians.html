@@ -2,26 +2,34 @@
 <html>
     <head>
         <title>Some Health Care</title>
-        <link rel="stylesheet" href="SomeHealthCare.css">
+        <link rel="stylesheet" href="https://github.com/NeeluSan/UI_Project/blob/master/SomeHealthCare.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                    $(".slideList").hide();
+
+                    $("#articleList").click(function(){
+                        $(".slideList").slideToggle("slow");
+                    });
+                });
+        </script>
     </head>
     <body>
         <div id="header">
-            <div id="headerImg">
-                <img src="images\medCross.jpg" width="50px" height="50px">
-            </div>
-            <h1>Some Health Care</h1>
+            <h1 id="headerTitle"><img src="https://cloud.githubusercontent.com/assets/16602049/12856468/f6e4ed84-cbf9-11e5-8276-7ce44fc4809c.jpg" alt="logo" width="30" height="30">    Some Health Care</h1>
         </div>
 
         <div id="navigation">
             <h3 id="links">Links</h3>
             <ul>
-                <li><a href="SomeHealthCare.html">Home</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-                <li><a href="physicians.html" style="background: #80e7ff;">Physicians</a><li>
-                <li><a href="tempPage.html">Articles</a></li>
-                <li><a href="tempPage.html">Locations</a></li>
-                <li><a href="tempPage.html">Contact Us</a></li>
-                <li><a href="tempPage.html">Careers</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/SomeHealthCare.html">Home</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/aboutUs.html">About Us</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/physicians.html">Physicians</a></li>
+                <li id="articleList">Articles</li>
+                    <li><a class="slideList" href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/nutrition.html">Nutrition</a></li>
+                    <li><a class="slideList" href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/exercise.html">Exercise</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/locations.html">Locations</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/careers.html">Careers</a></li>
             </ul>
         </div>
 
@@ -29,17 +37,17 @@
             <div id="content_3">
                 <h2>Meet our physicians:</h2>
 
-                <h3 class="docName">Dr. Abc</h3>
+                <h3 class="docName">Dr.Abc</h3>
                 <ul>
-                    <li><img class="docImage" src="images\StethPic.jpg" width="20%" height="20%"></li>
+                    <li><img class="docImage" src="https://cloud.githubusercontent.com/assets/16602049/12858811/2a3240e4-cc07-11e5-882f-33462adab441.JPG" alt="Dr.Abc" width="20%" height="20%"></li>
                     <li class="docInfo">Some information about this doctor. Some information about this doctor. Some information about this doctor. Some information about this doctor. Some information about this doctor. Some information about this doctor. Some information about this doctor.</li>
                 </ul>
 
                 <div style="clear:both;"></div>
 
-                <h3 class="docName">Dr. Def</h3>
+                <h3 class="docName">Dr.Def</h3>
                 <ul>
-                    <li><img class="docImage" src="images\StethPic.jpg" width="20%" height="20%"></li>
+                    <li><img class="docImage" src="https://cloud.githubusercontent.com/assets/16602049/12858811/2a3240e4-cc07-11e5-882f-33462adab441.JPG" alt="Dr.Def" width="20%" height="20%"></li>
                     <li class="docInfo">Some information about this doctor. Some information about this doctor. Some information about this doctor. Some information about this doctor. Some information about this doctor. Some information about this doctor. Some information about this doctor.</li>
                 </ul>
             </div>
