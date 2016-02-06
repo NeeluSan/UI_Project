@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8" />
+        <title>Some Health Care</title>
+        <link rel="stylesheet" href="https://github.com/NeeluSan/UI_Project/blob/master/SomeHealthCare.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                    $(".slideList").hide();
 
+                    $("#articleList").click(function(){
+                        $(".slideList").slideToggle("slow");
+                    });
+
+                    $("#locA").click( function(){
+                        if ( $(this).text( ) == "View Map" )
+                        {
+                           $(this).text( "Hide Map" );
+                           $("#mapA").slideDown("slow");
+                        }
+                        else
+                        {
+                           $(this).text( "View Map" );
+                           $("#mapA").slideUp("slow");
+                        }
+                    });
+
+                    $("#locB").click( function(){
+                        if ( $(this).text( ) == "View Map" )
+                        {
+                           $(this).text( "Hide Map" );
+                           $("#mapB").slideDown("slow");
+                        }
+                        else
+                        {
+                           $(this).text( "View Map" );
+                           $("#mapB").slideUp("slow");
+                        }
+                    });
+
+                });
+        </script>
+    </head>
+
+    <body>
+        <div id="header">
+            <h1 id="headerTitle"><img src="https://cloud.githubusercontent.com/assets/16602049/12856468/f6e4ed84-cbf9-11e5-8276-7ce44fc4809c.jpg" alt="logo" width="30" height="30">    Some Health Care</h1>
+        </div>
+
+        <div id="navigation">
+            <h3 id="links">Links</h3>
+            <ul>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/SomeHealthCare.html">Home</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/aboutUs.html">About Us</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/physicians.html">Physicians</a></li>
+                <li id="articleList">Articles</li>
+                    <li><a class="slideList" href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/nutrition.html">Nutrition</a></li>
+                    <li><a class="slideList" href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/exercise.html">Exercise</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/locations.html">Locations</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/careers.html">Careers</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div id="content_5">
+                <h2>Our locations:</h2>
+
+                <ul>
+                    <li>
+                        <h3>Abc City:</h3>
+                        <p>#12345, Abc Ave NE, Abc City.</p>
+                        <p>Phone: (xxx)-xxx-xxxx
+                        <p>Fax: (xxx)-xxx-xxxx
+                        <p id="locA">View Map</p>
+                        <div id="mapA">
+                            <!--Begin: Code from Bing Maps-->
+                            <div>
+                                <iframe width="325" height="280" frameborder="0" src="http://www.bing.com/maps/embed/viewer.aspx?v=3&amp;cp=27.980786~86.920935&amp;lvl=16&amp;w=325&amp;h=280&amp;sty=r&amp;typ=d&amp;pp=&amp;ps=&amp;dir=0&amp;mkt=en-us&amp;src=SHELL&amp;form=BMEMJS"></iframe>
+                                <div style="margin: 12px 0 0 0;">
+                                    <a target="_blank" href="http://www.bing.com/maps/?cp=27.980786~86.920935&amp;sty=r&amp;lvl=16&amp;sp=&amp;mm_embed=map">View Larger Map</a>&nbsp; |&nbsp; <a target="_blank" href="http://www.bing.com/maps/?cp=27.980786~86.920935&amp;sty=r&amp;lvl=16&amp;rtp=~pos.27.980786_86.920935____&amp;mm_embed=dir">Get Directions</a>&nbsp; |&nbsp; <a target="_blank" href="http://www.bing.com/maps/?cp=nnx3j3r79233&amp;sty=b&amp;lvl=18&amp;sp=&amp;mm_embed=be">View Bird's Eye</a>
+                                </div>
+                            </div>
+                            <!--End: Code from Bing Maps-->
+                        </div>
+                    </li>
+
+                    <li>
+                        <h3>Def City:</h3>
+                        <p>#56789, Def Ave NE, Def City.</p>
+                        <p>Phone: (xxx)-xxx-xxxx
+                        <p>Fax: (xxx)-xxx-xxxx
+                        <p id="locB">View Map</p>
+                        <div id="mapB">
+                            <!--Begin: Code from Bing Maps-->
+                            <div>
+                                <iframe width="325" height="280" frameborder="0" src="http://www.bing.com/maps/embed/viewer.aspx?v=3&amp;cp=35.888239~76.507353&amp;lvl=15&amp;w=325&amp;h=280&amp;sty=r&amp;typ=d&amp;pp=&amp;ps=&amp;dir=0&amp;mkt=en-us&amp;src=SHELL&amp;form=BMEMJS"></iframe>
+                                <div style="margin: 12px 0 0 0;">
+                                    <a target="_blank" href="http://www.bing.com/maps/?cp=35.888239~76.507353&amp;sty=r&amp;lvl=15&amp;sp=&amp;mm_embed=map">View Larger Map</a>&nbsp; |&nbsp; <a target="_blank" href="http://www.bing.com/maps/?cp=35.888239~76.507353&amp;sty=r&amp;lvl=15&amp;rtp=~pos.35.888239_76.507353____&amp;mm_embed=dir">Get Directions</a>&nbsp; |&nbsp; <a target="_blank" href="http://www.bing.com/maps/?cp=pzf727qc81j9&amp;sty=b&amp;lvl=18&amp;sp=&amp;mm_embed=be">View Bird's Eye</a>
+                                </div>
+                            </div>
+                            <!--End: Code from Bing Maps-->
+                        </div>
+                     </li>
+
+               </ul>
+
+            </div>
+
+            <footer id="foot">
+                <p>Please note-This is <b>not</b> a real website!</p>
+            </footer>
+        </div>
+
+    </body>
+</html>
