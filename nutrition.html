@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8" />
+        <title>Some Health Care</title>
+        <link rel="stylesheet" href="https://github.com/NeeluSan/UI_Project/blob/master/SomeHealthCare.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                    $("#articleList").click(function(){
+                        $(".slideList").slideToggle("slow");
+                    });
+                });
+        </script>
+    </head>
 
+    <body>
+        <div id="header">
+            <h1 id="headerTitle"><img src="https://cloud.githubusercontent.com/assets/16602049/12856468/f6e4ed84-cbf9-11e5-8276-7ce44fc4809c.jpg" alt="logo" width="30" height="30">    Some Health Care</h1>
+        </div>
+
+        <div id="navigation">
+            <h3 id="links">Links</h3>
+            <ul>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/SomeHealthCare.html">Home</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/aboutUs.html">About Us</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/physicians.html">Physicians</a></li>
+                <li id="articleList">Articles</li>
+                    <li><a class="slideList" href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/nutrition.html">Nutrition</a></li>
+                    <li><a class="slideList" href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/exercise.html">Exercise</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/locations.html">Locations</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/careers.html">Careers</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div id="content_4a">
+                <h2>Articles on Nutrition:</h2>
+                <div id="listOfContents">
+                    <ul>
+                        <li><a href="#article1">Eating vegetables is good for you</a></li>
+                        <li><a href="#article2">Foods with low cholesterol content</a></li>
+                        <li><a href="#article3">Foods rich in protein</a></li>
+                    </ul>
+                </div>
+
+                <div id="articles">
+                    <h3 id="article1">Eating vegetables is good for you</h3>
+                    <p>Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. </p>
+
+                    <h3 id="article2">Foods with low cholesterol content</h3>
+                    <p>Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. </p>
+
+                    <h3 id="article3">Foods rich in protein</h3>
+                    <p>Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. Some information on this topic. </p>
+                </div>
+            </div>
+
+            <footer id="foot">
+                <p>Please note-This is <b>not</b> a real website!</p>
+            </footer>
+        </div>
+
+    </body>
+</html>
