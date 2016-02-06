@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8" />
+        <title>Some Health Care</title>
+        <link rel="stylesheet" href="https://github.com/NeeluSan/UI_Project/blob/master/SomeHealthCare.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                    $(".slideList").hide();
 
+                    $("#articleList").click(function(){
+                        $(".slideList").slideToggle("slow");
+                    });
+                });
+        </script>
+    </head>
+
+    <body>
+        <div id="header">
+            <h1 id="headerTitle"><img src="https://cloud.githubusercontent.com/assets/16602049/12856468/f6e4ed84-cbf9-11e5-8276-7ce44fc4809c.jpg" alt="logo" width="30" height="30">    Some Health Care</h1>
+        </div>
+
+        <div id="navigation">
+            <h3 id="links">Links</h3>
+            <ul>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/SomeHealthCare.html">Home</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/aboutUs.html">About Us</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/physicians.html">Physicians</a></li>
+                <li id="articleList">Articles</li>
+                    <li><a class="slideList" href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/nutrition.html">Nutrition</a></li>
+                    <li><a class="slideList" href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/exercise.html">Exercise</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/locations.html">Locations</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/careers.html">Careers</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div id="content_6">
+                <h2>Join Some Health Care, the best workplace!</h2>
+
+                    <form id="jobSearchForm" name="jobSearchForm">
+                        <table id="jobSearchTable">
+                            <tr>
+                                <td colspan="3">Search below for job openings:</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <select>
+                                        <option selected>Select by Category</option>
+                                        <option>Administration</option>
+                                        <option>Customer Support</option>
+                                        <option>Finance</option>
+                                        <option>Health Care</option>
+                                        <option>Information Technology</option>
+                                        <option>Sales</option>
+                                        <option>Other</option>
+                                    </select>
+                                </td>
+
+                                <td id="gap"></td>
+
+                                <td>
+                                    <select>
+                                        <option selected>Select by Location</option>
+                                        <option>Abc City</option>
+                                        <option>Def City</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="3"><input id="submit" name="submit" type="submit" value="Search" onclick="displayMessage( event )"></td>
+                            </tr>
+
+                        </table>
+
+                        <p id="searchMsg"></p>
+
+                    </form>
+            </div>
+
+            <footer id="foot">
+                <p>Please note-This is <b>not</b> a real website!</p>
+            </footer>
+        </div>
+
+        <script>
+            function displayMessage( event )
+            {
+                document.getElementById("searchMsg").innerHTML = "Since this is not a real website, we won't be proceeding any further.";
+                event.preventDefault();
+            }
+        </script>
+
+    </body>
+</html>
