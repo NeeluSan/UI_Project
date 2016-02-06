@@ -10,43 +10,34 @@
             body {
                 color:black;
                 font-family: verdana, helvetica, arial, serif;
-                background-color: #e5faff;
+                background-color: #ccf5ff;
             }
 
             #header {
+                position: fixed;
+                width: 100%;
                 height: 120px;
-                float: top;
-                padding-top: 20px;
+                top: 0;
                 margin: 0;
-                padding-bottom: 0;
-                background-color: #80e7ff;
-                border-bottom: 3px solid #6699cc;
+                background: linear-gradient(#0091b3, #80e7ff, #0091b3);
+                border-bottom: 3px solid #007c99;
             }
 
-            #headerImg {
-                float: left;
-                padding-left: 40%;
-                padding-top: 20px;
-                padding-right: 0;
-            }
-
-            h1 {
-                float: left;
-                font: 20px;
-                padding-left: 20px;
-                padding-top: 25px;
+            #headerTitle {
+                padding-top: 40px;
+                padding-left: 30%;
             }
 
             #content {
                 position: absolute;
-                left: 200px;
+                left: 217px;
                 top : 120px;
                 right: 0;
                 bottom: 0;
                 padding-top: 40px;
                 padding-left: 40px;
+                padding-right: 20px;
                 z-index: -1;
-                background-color: #e5faff;
             }
 
             #welcomeHeader {
@@ -58,57 +49,72 @@
             }
 
             #login {
-                position: absolute;
-                left: 350px;
-                top: 150px;
+                padding: 15px;
             }
 
             #loginHeader {
-                padding : 10px 0 15px 0;
+                font-size: 1.2em;
+                font-weight: bold;
             }
 
-            #loginForm p {
-                padding : 10px 0 10px 0;
+            #loginTable tr {
+                height: 40px;
             }
 
-            #loginForm input {
-                position: absolute;
-                left: 100px;
+            #jobSearchTable tr {
+                height: 40px;
+            }
+
+            #jobSearchTable select {
+                height: 30px;
+                width: 250px;
+            }
+
+            #gap {
+                width: 20px;
+            }
+
+            #loginTable input, #jobSearchTable input {
                 width: 200px;
                 height: 30px;
-            }
-
-            #submit {
-                position: absolute;
-                left: 100px;
-                border: 2px solid #dae5f1;
+                border-radius: 10px;
                 font-size: 1.2em;
             }
 
-            #submit:hover {
-                background: #80e7ff;
+            input:invalid {
+                border: 2px solid red;
             }
 
-            #newUser {
-                padding-top: 20px;
-                //border: 2px solid black;
+            #errorMsg {
+                display: none;
+                color: red;
+            }
+
+            #submit {
+                background: linear-gradient( #00b9e6, #00ceff,  #00b9e6 );
+                border: 2px solid #00a5cc;
+            }
+
+            #submit:hover {
+                background: linear-gradient( #00ceff, #4dddff, #00ceff );
+                border: 2px solid #00b9e6;
             }
 
             #caution {
-                position: absolute;
-                top: 400px;
+                padding: 15px;
                 color: red;
             }
 
             #navigation {
-                float: left;
+                position: fixed;
                 width: 200px;
                 top: 120px;
-                height: 600px;
+                height: 100%;
                 left: 0;
                 padding-top: 40px;
                 padding-left:15px;
-                background: #dae5f1;
+                background: #c8d8ea;
+                border-right: 2px solid #b5cbe3;
                 z-index: -1;
             }
 
@@ -123,29 +129,40 @@
                 list-style: none;
             }
 
-            #navigation ul a {
+            #navigation ul a, #articleList {
                 margin: 5px;
-                padding: 3px;
+                padding: 4px;
                 display: block;
                 width: 150px;
-                background: #b5cbe3;
+                background: linear-gradient( #90b1d5, #a3bedc, #90b1d5 );
+                border-radius: 5px;
+                border: 2px solid #7ea4ce;
                 text-decoration: none;
             }
 
-            #navigation ul a:hover {
-                background: #80e7ff;
+            #navigation ul a:hover, #articleList:hover {
+                background: linear-gradient( #00ceff, #4dddff, #00ceff );
+                border: 2px solid #00b9e6;
             }
 
-            #content_2 p {
+            #articleList {
+                color: #0066cc;
+                margin-bottom: 0;
+                cursor: pointer;
+            }
+
+            #navigation a.slideList {
+                margin-top: 0;
+                margin-bottom: 0;
+                text-indent: 20px;
+            }
+
+            #content_2 p, .docName, #content_4a h2, #content_4a h3, #content_5 h3 {
                 padding-top: 20px;
             }
 
-            #content_3 ul {
+            #content_3 ul, content_4a ul {
                 list-style: none;
-            }
-
-            .docName {
-                padding-top: 20px;
             }
 
             .docImage {
@@ -159,20 +176,26 @@
                 padding-left: 310px;
             }
 
+            #content_4a p {
+                padding-top: 10px;
+            }
+
+            #locA, #locB {
+                color: #0066cc;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            #mapA, #mapB {
+                display: none;
+            }
+
             #tempMsg {
                 padding-top: 100px;
             }
 
-            #errorMsg {
-                color: red;
-                font-weight: bold;
-            }
-
             #foot {
-                position: absolute;
-                top: 490px;
-                left: 350px;
-                right: 0;
-                padding: 0;
+                text-align: center;
                 font-size: 80%;
+                padding: 2%;
             }
