@@ -192,10 +192,6 @@
                 cursor: pointer;
             }
 
-            #mapA, #mapB {
-                display: none;
-            }
-
             #tempMsg {
                 padding-top: 100px;
             }
@@ -210,6 +206,8 @@
         <script>
             $(document).ready(function(){
                     $(".slideList").hide();
+                    $("#mapA").hide();
+                    $("#mapB").hide();                    
 
                     $("#articleList").click(function(){
                         $(".slideList").slideToggle("slow");
