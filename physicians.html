@@ -2,7 +2,209 @@
 <html>
     <head>
         <title>Some Health Care</title>
-        <link rel="stylesheet" href="https://github.com/NeeluSan/UI_Project/blob/master/SomeHealthCare.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                float: none;
+                outline: 0;
+                border: none;
+            }
+
+            body {
+                color:black;
+                font-family: verdana, helvetica, arial, serif;
+                background-color: #ccf5ff;
+            }
+
+            #header {
+                position: fixed;
+                width: 100%;
+                height: 120px;
+                top: 0;
+                margin: 0;
+                background: linear-gradient(#0091b3, #80e7ff, #0091b3);
+                border-bottom: 3px solid #007c99;
+            }
+
+            #headerTitle {
+                padding-top: 40px;
+                padding-left: 30%;
+            }
+
+            #content {
+                position: absolute;
+                left: 217px;
+                top : 120px;
+                right: 0;
+                bottom: 0;
+                padding-top: 40px;
+                padding-left: 40px;
+                padding-right: 20px;
+                z-index: -1;
+            }
+
+            #welcomeHeader {
+                padding: 10px;
+            }
+
+            #welcomeMsg {
+                padding: 15px;
+            }
+
+            #login {
+                padding: 15px;
+            }
+
+            #loginHeader {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+
+            #loginTable tr {
+                height: 40px;
+            }
+
+            #jobSearchTable tr {
+                height: 40px;
+            }
+
+            #jobSearchTable select {
+                height: 30px;
+                width: 250px;
+            }
+
+            #gap {
+                width: 20px;
+            }
+
+            #loginTable input, #jobSearchTable input {
+                width: 200px;
+                height: 30px;
+                border-radius: 10px;
+                font-size: 1.2em;
+            }
+
+            input:invalid {
+                border: 2px solid red;
+            }
+
+            #errorMsg {
+                display: none;
+                color: red;
+            }
+
+            #submit {
+                background: linear-gradient( #00b9e6, #00ceff,  #00b9e6 );
+                border: 2px solid #00a5cc;
+            }
+
+            #submit:hover {
+                background: linear-gradient( #00ceff, #4dddff, #00ceff );
+                border: 2px solid #00b9e6;
+            }
+
+            #caution {
+                padding: 15px;
+                color: red;
+            }
+
+            #navigation {
+                position: fixed;
+                width: 200px;
+                top: 120px;
+                height: 100%;
+                left: 0;
+                padding-top: 40px;
+                padding-left:15px;
+                background: #c8d8ea;
+                border-right: 2px solid #b5cbe3;
+                z-index: -1;
+            }
+
+            #links {
+                padding-left: 3px;
+                padding-bottom: 5px;
+            }
+
+            #navigation ul {
+                margin: 0;
+                padding:0;
+                list-style: none;
+            }
+
+            #navigation ul a, #articleList {
+                margin: 5px;
+                padding: 4px;
+                display: block;
+                width: 150px;
+                background: linear-gradient( #90b1d5, #a3bedc, #90b1d5 );
+                border-radius: 5px;
+                border: 2px solid #7ea4ce;
+                text-decoration: none;
+            }
+
+            #navigation ul a:hover, #articleList:hover {
+                background: linear-gradient( #00ceff, #4dddff, #00ceff );
+                border: 2px solid #00b9e6;
+            }
+
+            #articleList {
+                color: #0066cc;
+                margin-bottom: 0;
+                cursor: pointer;
+            }
+
+            #navigation a.slideList {
+                margin-top: 0;
+                margin-bottom: 0;
+                text-indent: 20px;
+            }
+
+            #content_2 p, .docName, #content_4a h2, #content_4a h3, #content_5 h3 {
+                padding-top: 20px;
+            }
+
+            #content_3 ul, content_4a ul {
+                list-style: none;
+            }
+
+            .docImage {
+                float: left;
+                width: 300px;
+                height: 150px;
+            }
+
+            .docInfo {
+                padding-top: 40px;
+                padding-left: 310px;
+            }
+
+            #content_4a p {
+                padding-top: 10px;
+            }
+
+            #locA, #locB {
+                color: #0066cc;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            #mapA, #mapB {
+                display: none;
+            }
+
+            #tempMsg {
+                padding-top: 100px;
+            }
+
+            #foot {
+                text-align: center;
+                font-size: 80%;
+                padding: 2%;
+            }
+        </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
