@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head lang="en">
+        <meta charset="utf-8" />
         <title>Some Health Care</title>
-        <link rel="stylesheet" href="SomeHealthCare.css">
+        <link rel="stylesheet" href="https://github.com/NeeluSan/UI_Project/blob/master/SomeHealthCare.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                    $(".slideList").hide();
+
+                    $("#articleList").click(function(){
+                        $(".slideList").slideToggle("slow");
+                    });
+                });
+        </script>
     </head>
+
     <body>
         <div id="header">
-            <div id="headerImg">
-                <img src="images\medCross.jpg" width="50px" height="50px">
-            </div>
-            <h1>Some Health Care</h1>
+            <h1 id="headerTitle"><img src="https://cloud.githubusercontent.com/assets/16602049/12856468/f6e4ed84-cbf9-11e5-8276-7ce44fc4809c.jpg" alt="logo" width="30" height="30">    Some Health Care</h1>
         </div>
 
         <div id="navigation">
             <h3 id="links">Links</h3>
             <ul>
-                <li><a href="SomeHealthCare.html">Home</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-                <li><a href="physicians.html">Physicians</a><li>
-                <li><a href="tempPage.html">Articles</a></li>
-                <li><a href="tempPage.html">Locations</a></li>
-                <li><a href="tempPage.html">Contact Us</a></li>
-                <li><a href="tempPage.html">Careers</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/SomeHealthCare.html">Home</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/aboutUs.html">About Us</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/physicians.html">Physicians</a></li>
+                <li id="articleList">Articles</li>
+                    <li><a class="slideList" href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/nutrition.html">Nutrition</a></li>
+                    <li><a class="slideList" href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/exercise.html">Exercise</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/locations.html">Locations</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/careers.html">Careers</a></li>
             </ul>
         </div>
 
@@ -31,16 +41,37 @@
                 <p id="welcomeMsg"><b>Use this web portal to access lab reports, pay bills, and much more</b></p> 
 
                 <div id="login">
-                    <h3 id="loginHeader">User login:</h3>
-                    <form id="loginForm" name="loginForm" action="tempPage.html" method="post">
-                        <p>User name: <input name="username" id="username" type="text" required></p>
+                    <form id="loginForm" name="loginForm" action="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/tempPage.html" method="post">
+                        <table id="loginTable">
+                            <tr>
+                                <td id="loginHeader">User login:</td>
+                                <td></td>
+                            </tr>
 
-                        <p>Password: <input name="pwd" id="pwd" type="password" minlength="8" maxlength="50" required></p>
+                            <tr>
+                                <td><label for="username">User name:</label></td>
+                                <td><input name="username" id="username" type="text" required autofocus="true"></td>
+                            </tr>
 
-                        <p><input id="submit" class="buttons" name="submit" type="submit" value="Login"></p>
-                        <p id="errorMsg"></p>
+                            <tr>
+                                <td><label for="pwd">Password:</label></td>
+                                <td><input name="pwd" id="pwd" type="password" maxlength="50" required></td>
+                            </tr>
+
+                            <tr id="errorMsg">
+                                <td colspan="2" id="errorInfo">Password must be atleast 8 characters long</td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td><input id="submit" name="submit" type="submit" value="Login" onclick="checkInput(event)"></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2" id="forgotPwd"><a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/tempPage.html">Forgot your password?</a> / <a href="http://htmlpreview.github.io/?https://github.com/NeeluSan/UI_Project/blob/master/tempPage.html">New user sign-up</a></td>
+                            </tr>
+                        </table>
                     </form>
-                    <p id="newUser">New user? <a href="newUserLogin.asp">Click here</a></p>
                 </div>
 
                 <div id="caution">
@@ -52,6 +83,50 @@
                 <p>Please note-This is <b>not</b> a real website!</p>
             </footer>
         </div>
+
+        <script>
+            var maxAttempts = 3; // Max number of login tries
+
+            /*  This function verifies that the user has entered a username  
+            *  and checks if the login password entered is atleast 8 characters  
+            *  long. It disables the input fields if the user fails 3 times 
+            *  to enter a password of valid length.
+            */
+            function checkInput(event) {
+                if (document.getElementById("username").value.length > 0) {
+                    var pwdElement = document.getElementById("pwd");
+                    if ((pwdElement.value.length) < 8) {
+                        maxAttempts--;
+                        if (maxAttempts > 0) {
+                            if (maxAttempts == 2) {
+                                pwdElement.style.border = "2px solid red";
+                                var errMsgRow = document.getElementById("errorMsg");
+                                errMsgRow.style.display = "table-row";
+                            }
+                        }
+                        else {
+                            pwdElement.style.border = "none";
+                            replaceErrorMsg();
+                            document.getElementById("username").disabled = true;
+                            document.getElementById("pwd").disabled = true;
+                            document.getElementById("login").disabled = true;
+                        }
+                        event.preventDefault();
+                    }
+                }
+            }
+
+            /*  This function replaces the current error message with the
+            *  new error message.
+            */
+            function replaceErrorMsg() {
+                var errInfoData = document.getElementById("errorInfo");
+                var oldTextNode = errInfoData.lastChild;
+                var newTextNode = document.createTextNode("You've tried to login too many times. Please try again later.");
+                errInfoData.replaceChild(newTextNode, oldTextNode);
+            }
+
+        </script>
 
     </body>
 </html>
